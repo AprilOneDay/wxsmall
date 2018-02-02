@@ -12,10 +12,10 @@
 </view>
 
 <!-- 列表展示 -->
-<view class="nav-block wrap">
+<view class="nav-block list">
   <block wx:for="{{list}}"> 
-    <view class="wrap-item" >
-      <image style="width: 30px; height: 30px; " mode="scaleToFill" src="{{item.thumb}}">{{item.title}}</image>{item.title}}
+    <view class="list-item" >
+      <image style="width: 150px; height: 160px; " mode="scaleToFill" src="{{item.thumb}}">{{item.title}}</image>{{item.title}}
     </view>
   </block>
 </view>
