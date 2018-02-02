@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/tel/tel",
+    "pages/map/map"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "万色璟花艺馆",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/tab_home.png",
+        "selectedIconPath":"images/tab_home_hover.png"
+      },
+      {
+        "pagePath": "pages/tel/tel",
+        "text": "电话咨询",
+        "iconPath": "images/tab_tel.png",
+        "selectedIconPath": "images/tab_tel_hover.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图导航",
+        "iconPath": "images/tab_map.png",
+        "selectedIconPath": "images/tab_map_hover.png"
+      }
+    ]
+  },
+  "debug": true
+}
