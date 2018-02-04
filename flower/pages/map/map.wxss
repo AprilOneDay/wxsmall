@@ -1,1 +1,28 @@
 /* pages/map/map.wxss */
+.nav-block{
+  padding: 0.5rem;
+}
+
+.list-item{
+  display: block;
+  border: 1px solid #e1e1e1;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.list-item .title{
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.list-item .address{
+  font-size: 0.8rem;
+}
+
+.list-item .map{
+  font-size: 0.8rem;
+  text-align: right;
+  margin-right: 0.2rem;
+  margin-top: 0.2rem;
+}

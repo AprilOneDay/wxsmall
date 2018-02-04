@@ -1,2 +1,24 @@
-<!--pages/map/map.wxml-->
-<text>pages/map/map.wxml</text>
+<import src="../../../wxParse/wxParse.wxml" />
+<!-- banner -->
+<view class="banner">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:230px">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" model="aspectFit" style="width: 100%;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 列表展示 -->
+<view class="nav-block shop">
+  <block wx:for="{{list}}" wx:key="*this"> 
+    <view class="list-item" bindtap="address" id="{{index}}">
+        <view class="title">{{item.title}}</view>
+        <view class="address">公司地址:{{item.address}}</view>
+        <view class="map">查看地图</view>
+    </view>
+  </block>
+</view>
+

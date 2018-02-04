@@ -1,2 +1,22 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<import src="../../../wxParse/wxParse.wxml" />
+<!-- banner -->
+<view class="banner">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:230px">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" model="aspectFit" style="width: 100%;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 内容页面 -->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<view class="tel" wx:if="{{data.column_id == '90'}}" bindtap="callTel" data-number="{{data.btitle}}">
+  <image src="/images/tab_tel_hover.png" class="slide-image" width="30" height="40"/>{{data.btitle}}
+  <view class="btn-tel">拨打电话</view>
+</view>

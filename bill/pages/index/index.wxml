@@ -1,0 +1,60 @@
+<!-- banner -->
+<view class='type-bg'>
+  <view class="type">
+    <label class="{{type == 1055 ? 'currt' : ''}}" bindtap="btnType" id="1055">剁手</label>
+    <label class="{{type == 1056 ? 'currt' : ''}}" bindtap="btnType" id="1056">招财</label>
+  </view>
+  <view class="btn-code" bindtap="btnScanCode">
+      <image src="/images/scan_code.png"></image>   
+      扫一扫
+    </view>
+</view>
+
+<view class="ico">
+  <block wx:for="{{signList}}"> 
+    <label bindtap="btnIcon" id="{{item.id}}">
+      <image src="{{item.thumb != '' ? item.thumb : '/images/bill_1.png'}}" class="{{onSign == item.id ? 'hot' : ''}}"></image>   
+      {{item.name}}
+    </label>
+  </block>
+</view>
+
+<view class="money">
+  <picker mode="date" value="{{date}}" start="2018-01-01" end="2018-12-31" bindchange="bindDateChange">
+    <view class="picker">{{date}}</view>
+  </picker>
+  <label class="account">{{accountText}}</label>
+</view>
+
+<view class="keyboard">
+    <view class="btnGroup">
+        <view class="item orange" bindtap="clickButton" id="back">退格</view>
+        <view class="item orange" bindtap="clickButton" id="c">清屏</view>
+        <view class="item orange" bindtap="clickButton" id="卖萌">卖萌</view>
+        <view class="item orange" bindtap="clickButton" id="+">+ </view>
+    </view>
+    <view class="btnGroup">
+        <view class="item blue" bindtap="clickButton" id="7">7</view>
+        <view class="item blue" bindtap="clickButton" id="8">8</view>
+        <view class="item blue" bindtap="clickButton" id="9">9</view>
+        <view class="item orange" bindtap="clickButton" id="-">-</view>
+    </view>
+    <view class="btnGroup">
+        <view class="item blue" bindtap="clickButton" id="4">4</view>
+        <view class="item blue" bindtap="clickButton" id="5">5</view>
+        <view class="item blue" bindtap="clickButton" id="6">6</view>
+        <view class="item orange" bindtap="clickButton" id="x">×</view>
+    </view>
+    <view class="btnGroup">
+        <view class="item blue" bindtap="clickButton" id="1">1</view>
+        <view class="item blue" bindtap="clickButton" id="2">2</view>
+        <view class="item blue" bindtap="clickButton" id="3">3</view>
+        <view class="item orange" bindtap="clickButton" id="÷">÷</view>
+    </view>
+    <view class="btnGroup">
+        <view class="item blue" bindtap="clickButton" id="0">0</view>
+        <view class="item blue" bindtap="clickButton" id=".">.</view>
+        <view class="item blue" bindtap="btnComply">保存</view>
+        <view class="item orange" bindtap="clickButton" id="=">=</view>
+    </view>
+</view>

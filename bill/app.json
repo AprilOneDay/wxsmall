@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/bill/bill",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4ad9d9",
+    "navigationBarTitleText": "家庭开支账本",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "记账",
+        "iconPath": "images/nav_1.png",
+        "selectedIconPath": "images/nav_1_hover.png"
+      },
+      {
+        "pagePath": "pages/bill/bill",
+        "text": "流水",
+        "iconPath": "images/nav_2.png",
+        "selectedIconPath": "images/nav_2_hover.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
+        "iconPath": "images/nav_3.png",
+        "selectedIconPath": "images/nav_3_hover.png"
+      }
+    ]
+  },
+  "debug": false
+}

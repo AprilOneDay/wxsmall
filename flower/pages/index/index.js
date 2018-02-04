@@ -5,6 +5,7 @@ var WxParse = require('../../wxParse/wxParse.js');
 
 Page({
   data: {
+    indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
@@ -24,6 +25,7 @@ Page({
           ulrs[key] = data.list[key].path
         }
         _this.setData({
+          imageWidth: wx.getSystemInfoSync().windowWidth,//图片宽度   
           imgUrls: ulrs
         })
       }

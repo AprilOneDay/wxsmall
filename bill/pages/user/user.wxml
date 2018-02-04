@@ -1,0 +1,12 @@
+<!-- banner -->
+<view class="user-header">
+  <view class="avatar">
+     <image src="{{userInfo.avatar}}"></image>
+     <view>{{userInfo.nickname}}</view>   
+  </view>
+</view>
+
+<view>
+  <view>家庭成员</view>
+  <view>问题反馈</view>
+</view>

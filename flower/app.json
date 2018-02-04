@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/list/list",
-    "pages/tel/tel",
+    "pages/about/about",
     "pages/map/map"
   ],
   "window":{
@@ -20,8 +20,8 @@
         "selectedIconPath":"images/tab_home_hover.png"
       },
       {
-        "pagePath": "pages/tel/tel",
-        "text": "电话咨询",
+        "pagePath": "pages/about/about",
+        "text": "关于我们",
         "iconPath": "images/tab_tel.png",
         "selectedIconPath": "images/tab_tel_hover.png"
       },
