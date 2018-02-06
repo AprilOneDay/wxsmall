@@ -6,7 +6,19 @@
   </view>
 </view>
 
-<view>
-  <view>家庭成员</view>
-  <view>问题反馈</view>
+<view class="menus">
+  <view class="nav" bindtap="jumpNav" id="/pages/family/lists/lists">
+    <image src="/images/icon_user_1.png"></image>
+    家庭成员
+    <label>></label>
+  </view>
+  <view class="nav" bindtap="jumpNav" id="/pages/family/family">
+    <image src="/images/icon_user_2.png"></image>
+    问题反馈
+    <label>></label>
+  </view>
+</view>
+
+<view class="tips"> 
+    不积跬步无以至剁手
 </view>

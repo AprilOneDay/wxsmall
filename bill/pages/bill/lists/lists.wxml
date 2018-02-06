@@ -1,0 +1,33 @@
+<!--pages/bill/bill.wxml-->
+<view class="header">
+  <view class="all-money">
+    <view class="money">
+      小金库(元)
+      <label>{{data.allMoney}}</label>
+    </view>
+  </view>
+</view>
+<view class="this-month-money">
+    <view class="tip">
+      2018-02 收入:{{data.moneyMonth[1]}} 支出：{{data.moneyMonth[2]}}
+    </view>
+
+    <view class="trend">
+      {{data.trendMoney}}
+      <image src="/images/{{data.trendInco == 1 ? 'icon_up' : 'icon_down'}}.png"></image>
+    </view>
+  </view>
+  
+  <view class="lists">
+    <block wx:for="{{data.list}}" wx:key="*this"> 
+      <navigator url="/pages/bill/detail/detail?id={{item.id}}">
+        <view class="item">
+          <image src="/images/{{item.type == 1 ? 'income' : 'pay'}}.png"></image>
+          <view class="title">
+            {{item.title}} {{item.type == 1 ? '+ '+item.money : '- '+item.money}}
+            <label class="time">{{item.time}} </label>
+          </view>
+        </view>
+      </navigator>
+    </block> 
+  </view>

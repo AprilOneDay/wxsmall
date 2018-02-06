@@ -1,0 +1,14 @@
+/* pages/bill/bill.wxss */
+.header{background: #4ad9d9; padding-top: 0.5rem;  padding-bottom: 0.8rem; color: #fff;}
+.header .all-money{ padding-left:1rem; color: #fff; font-size: 0.8rem; text-align: left; margin-top: 1rem;}
+.header .all-money label{display: block; font-size: 2rem; margin-top: 0.5rem;}
+
+.this-month-money{ background: #e1e1e1; color: #8b8b8b; line-height: 1.6rem; padding-left: 1.2rem; font-size: 0.6rem;}
+.this-month-money .tip{  display: inline-block;}
+.this-month-money .trend{ display: inline-block; float: right; margin-right: 0.5rem;  }
+.this-month-money .trend image{ width: 20px; height: 23px; vertical-align: middle; }
+
+.lists .item{ width: 95%; padding-left: 5%;  padding-top:0.5rem; border-bottom: 1px solid #e1e1e1;  font-size: 0.7rem;  padding-bottom: 0.5rem; }
+.lists .item image{display:inline-block; width: 30px; height: 30px;  margin-right: 10px; vertical-align: middle; }
+.lists .item .title{ display:inline-block; width: 87%;}
+.lists .item .time{ float: right;}

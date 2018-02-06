@@ -1,0 +1,8 @@
+<!--pages/family/invite/invite.wxml-->
+<view class="invite">
+  <image src="{{data.url}}"></image>
+  <view class="tips">
+    开启本小程序 选择首页扫一扫 即可加入其中 
+    <label style="display:block; color:#333;">与其独扎心 不如众扎心</label>
+  </view>
+</view>

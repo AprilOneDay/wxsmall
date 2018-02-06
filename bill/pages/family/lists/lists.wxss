@@ -1,0 +1,16 @@
+/* pages/family/family.wxss */
+
+.lonely { margin-top: 5rem;}
+.lonely .bs{ width: 64px; height: 64px; display: block; margin: 0 auto;}
+.lonely .copy{ width: 100%; text-align: center;  margin-top:1.5rem; margin-bottom: 1.5rem; color: #333333; line-height: 1.4rem;}
+.lonely .copy label{ display: block; color: #ffb03b;}
+
+.lists { margin-top: 1rem;}
+.lists .item{ width: 95%; padding-left: 5%; line-height: 2.1rem; height: 2.8rem; margin: 0 auto; margin-bottom: 0.2rem; margin-top:0.5rem; border-bottom: 1px solid #e1e1e1;   }
+.lists .item image{ width: 40px; height: 40px; border-radius: 60px; float: left; margin-right: 10px; }
+.lists .item .title{ display: flex;align-items: center; vertical-align: text-top;}
+
+
+.invite{ position: fixed; bottom: 10px; width: 100%;}
+.invite-code{ width: 80%; display: block; margin: 0 auto; background: #4ad9d9; color: #fff; text-align: center; border-radius: 5px; line-height: 2.5rem; margin-bottom: 0.5rem; margin-top: 1rem; }
+.invite-share{ width: 80%; display: block; margin: 0 auto; background: #ffb03b; color: #333; text-align: center; border-radius: 5px; line-height: 2.5rem;  font-size: 0.8rem;}

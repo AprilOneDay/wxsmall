@@ -1,8 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/list/list",
-    "pages/bill/bill",
+
+    "pages/bill/lists/lists",
+    "pages/bill/detail/detail",
+
+    "pages/family/lists/lists",
+    "pages/family/invite/invite",
+    
     "pages/user/user"
   ],
   "window":{
@@ -12,6 +17,7 @@
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
+    "position":"bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -20,7 +26,7 @@
         "selectedIconPath": "images/nav_1_hover.png"
       },
       {
-        "pagePath": "pages/bill/bill",
+        "pagePath": "pages/bill/lists/lists",
         "text": "流水",
         "iconPath": "images/nav_2.png",
         "selectedIconPath": "images/nav_2_hover.png"

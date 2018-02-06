@@ -1,12 +1,12 @@
 //index.js
 //获取应用实例
 const app = getApp();
-const rpn = require('../../utils/rpn.js');
 let token = wx.getStorageSync('token');
 
 Page({
   data: {
-    userInfo:{}
+    list: {},
+    share:{}
   }, onLoad: function () {
     let _this = this;
     //定时请求直达获取信息
@@ -19,36 +19,49 @@ Page({
             token = res.data;
             if (token != '') {
               wx.hideLoading()
-              _this.getInfo();
+              _this.getList();
               clearInterval(Interval);
             }
           }
         });
       }, 500);
-    }else{
-      _this.getInfo();
+    } else {
+      _this.getList();
     }
   },
-  //跳转
-  jumpNav:function(event){
-    let url = event.currentTarget.id;
-    wx.navigateTo({
-      url: url
-    })
+  //分享
+  onShareAppMessage: function (res) {
+    let shareData = this.data.share;
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: shareData.title,
+      path: shareData.path,
+      imageUrl: shareData.imageUrl,
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   },
-  //切换类型
-  getInfo: function (event) {
+  //获取列表信息
+  getList: function (event) {
     let _this = this;
     wx.showLoading({ title: '加载中' })
     //获取栏目列表
     wx.request({
-      url: app.baseHost + app.baseVersion + '/user/index/index',
-      data: { token:token },
+      url: app.baseHost + app.baseVersion + '/user/BillFamily/lists',
+      data: { token: token },
       success: function (result) {
         wx.hideLoading()
         let data = result.data.data
         _this.setData({
-          userInfo: data
+          list: data.list,
+          share:data.share
         })
       }
     });

@@ -11,8 +11,10 @@ Page({
     signList:{}, //图标列表
     onSign:0,
     date:'2018-10-1', 
-  }, onShow: function () {
+  }, onLoad: function (option) {
     let _this = this;
+    let inviteSn = option.inviteSn;
+    let toToken  = option.toToken;
     //定时请求直达获取信息
     if(token == ''){
       let Interval = setInterval(function(){
@@ -22,12 +24,20 @@ Page({
           success: function (res) {
             token = res.data;
             if(token != ''){
+              //加入家庭
+              if (inviteSn && toToken){
+                _this.addFaimly(inviteSn, toToken);
+              }
               wx.hideLoading()
               clearInterval(Interval);
             }
           }
         });
       }, 500);
+    }
+    //加入家庭
+    if (inviteSn && toToken) {
+      _this.addFaimly(inviteSn, toToken);
     }
     _this.getBtnTypeCopy();
   },
@@ -85,7 +95,32 @@ Page({
     if (isNaN(data.accountText)){
       return wx.showToast({ title: '金额有误', icon: 'none',duration: 1000})
     }
-  },
+  }, 
+  //加入家庭
+  addFaimly: function (inviteSn, toToken){
+    wx.showModal({
+      title: '提示',
+      content: '确定加入'+toToken+'的小家庭？',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: app.baseHost + app.baseVersion + '/user/BillFamily/add',
+            data: { token: token, invite_sn: inviteSn},
+            success: function (result) {
+              wx.hideLoading();
+              wx.showToast({ title: result.data.msg, icon: 'none', duration: 2000 })
+              if (result.data.status) {
+                wx.navigateTo({
+                  url: '/pages/family/lists/lists'
+                })
+              }
+            }
+          });
+        }
+      }
+    })
+  }
+  ,
   //扫码
   btnScanCode: function (event) {
     // 只允许从相机扫码
@@ -101,6 +136,11 @@ Page({
             success: function (result) {
               wx.hideLoading();
               wx.showToast({ title: result.data.msg, icon: 'none', duration: 2000 })
+              if(result.data.status){
+                wx.navigateTo({
+                  url: '/pages/family/lists/lists'
+                })
+              }
             }
           });
         }

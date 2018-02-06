@@ -1,0 +1,12 @@
+/* pages/bill/detail/detail.wxss */
+page{ background: #f8f8f8; }
+
+.box{margin-bottom: 1rem; margin-top:1rem;  background: #fff; color: #333; width: 100%; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;}
+.box .group{ margin-left: 5%; width: 95%; line-height: 2rem; border-bottom: 1px solid #e1e1e1;}
+.box .group .right{ float: right; margin-right: 10px;}
+.box .group .right .avatar{ width: 23px;height: 23px; border-radius: 25px; vertical-align: middle; margin-left: 10px;}
+.box .group:last-child{ border-bottom: none;}
+
+.invite{ position: fixed; bottom: 10px; width: 100%;}
+.invite-code{ width: 80%; display: block; margin: 0 auto; background: #fff; color: #333; text-align: center; border-radius: 5px; line-height: 2.5rem; margin-bottom: 0.5rem; margin-top: 1rem; }
+.invite-share{ width: 80%; display: block; margin: 0 auto; background: red; color: #fff; text-align: center; border-radius: 5px; line-height: 2.5rem;  font-size: 0.8rem;}

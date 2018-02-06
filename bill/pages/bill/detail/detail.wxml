@@ -1,0 +1,31 @@
+<!--pages/bill/detail/detail.wxml-->
+<view class="box">
+  <view class="group">
+    <label class="left">{{data.type == 1 ? '收入' : '支出'}}</label>
+    <label class="right">{{data.money}}</label>
+  </view>
+</view>
+
+<view class="box">
+  <view class="group">
+    <label class="left">类型</label>
+    <label class="right">{{data.title}}</label>
+  </view>
+  <view class="group">
+    <label class="left">记录人</label>
+    <label class="right">{{data.user.nickname}}<image class="avatar" src="{{data.user.avatar}}"></image></label>
+  </view>
+  <view class="group">
+    <label class="left">时间</label>
+    <label class="right">{{data.time}}</label>
+  </view>
+  <view class="group" wx:if="{{data.remark != ''}}">
+    <label class="left">备注</label>
+    <label class="right">{{data.remark}}</label>
+  </view>
+</view>
+
+<view class="invite">
+  <button wx:if="{{data.is_del == 1}}" class="invite-share" bindtap="btnDel" id="{{data.id}}">删除记录</button>
+  <button bindtap="btnBack" class="invite-code" >返回列表</button>
+</view>

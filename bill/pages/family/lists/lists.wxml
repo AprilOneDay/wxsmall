@@ -1,0 +1,17 @@
+<view class="lonely" wx:if="{{list.length <= 1}}">
+  <image class="bs" src="/images/icon_bs.png"></image>
+  <view class="copy">孤家寡人一个快去寻找你的小伙伴吧 <label>也可以选择投怀送抱yooo</label></view>
+</view>
+<view class="lists" wx:else> 
+  <block wx:for="{{list}}"> 
+    <view class="item">
+      <image src="{{item.avatar}}"></image>
+      <view class="title">{{item.nickname}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="invite">
+  <navigator url="/pages/family/invite/invite" class="invite-code">扫码邀请</navigator>
+  <button class="invite-share" open-type="share" >分享邀请</button>
+</view>

@@ -2,3 +2,11 @@
 .user-header{background: #4ad9d9; padding-top: 0.5rem;  padding-bottom: 0.8rem;}
 .user-header .avatar{ width: 20%px; margin: 0 auto; color: #333333; font-size: 0.8rem; text-align: center;}
 .user-header image{ width: 60px; height: 60px; border-radius: 35px; margin-bottom: 0.2rem;}
+
+.menus{ margin-top: 0.2rem;} 
+.menus .nav{ width: 92%; margin: 0 auto; padding-left: 3%; border-bottom: 1px solid #e1e1e1; line-height: 2.8rem; color: #333333; }
+.menus .nav image{  width: 20px; height: 20px;   margin-right: 10px; vertical-align: text-top;}
+.menus .nav navigator{ display: inline-block;}
+.menus .nav label{ display: block; float: right; margin-right: 5px;}
+
+.tips{ width: 100%; display: block; position: fixed; bottom: 10px; text-align: center; color: #ffb03b; }

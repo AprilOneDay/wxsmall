@@ -1,0 +1,5 @@
+/* pages/family/invite/invite.wxss */
+.invite{ margin-top: 5rem;}
+.invite image{ width: 70%; display: block; margin: 0 auto; }
+.invite .tips{ width: 100%; text-align: center; color: #ffb03b; line-height: 1.3rem;}
+.invite .tips label {display:block; color:#333;}
